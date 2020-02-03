@@ -10,6 +10,7 @@ import com.hanters.api.assembler.ProdutosUsuarioInputDisassembler;
 import com.hanters.api.assembler.ProdutosUsuarioModelAssembler;
 import com.hanters.api.domain.entity.ProdutosUsuario;
 import com.hanters.api.domain.exception.EntidadeEmUsoException;
+import com.hanters.api.domain.exception.NegocioException;
 import com.hanters.api.domain.exception.ProdutosUsuarioNaoEncontradoException;
 import com.hanters.api.domain.repository.ProdutosUsuarioRepository;
 import com.hanters.api.model.ProdutosUsuarioModel;
@@ -56,6 +57,12 @@ public class CadastroProdutosUsuarioService {
 	}
 
 	public ProdutosUsuarioModel adicionar(ProdutosUsuarioInput produtosUsuarioInput) {
+		
+		if(!produtosUsuarioInput.getStatus().equals("A")) {
+			throw new NegocioException("Status Produto Usuario inválido");
+		}
+		
+		
 		ProdutosUsuario prodUsuario = produtosUsuarioRepository
 				.produtoAtivo(produtosUsuarioInput.getPk().getUsuarioId());
 

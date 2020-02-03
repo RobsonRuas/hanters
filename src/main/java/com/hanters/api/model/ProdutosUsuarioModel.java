@@ -10,7 +10,7 @@ public class ProdutosUsuarioModel {
 	@ApiModelProperty(example = "1")
 	private Long id;
 	
-	@ApiModelProperty(example = "(C)ancelado - (A)tivo", required = true)
+	@ApiModelProperty(example = "C ou A", required = true)
 	private String status;
 	
 	@ApiModelProperty(example = "Id Usuario e Id Produto", required = true)

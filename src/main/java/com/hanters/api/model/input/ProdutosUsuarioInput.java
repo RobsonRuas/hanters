@@ -9,7 +9,7 @@ import lombok.Data;
 public class ProdutosUsuarioInput {
 	
 	
-	@ApiModelProperty(example = "(C)ancelado - (A)tivo", required = true)
+	@ApiModelProperty(example = "C ou A ", required = true)
 	@NotBlank
 	private String status;
 	
