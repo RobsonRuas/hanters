@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.hanters</groupId>
-	<artifactId>hanters</artifactId>
+	<groupId>com.hunters</groupId>
+	<artifactId>hunters</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hanters</name>
+	<name>hunters</name>
 	<description>API Delivery </description>
 
 	<properties>
